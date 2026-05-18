@@ -1,7 +1,5 @@
 # What is Frontend System Design?
 
-## TL;DR
-
 Frontend system design is the practice of making **intentional, scalable architectural decisions** for client-side applications — covering how components are structured, how data flows, how state is managed, and how the system evolves over time. It's distinct from UI implementation: you're not writing components, you're designing the system that components live in.
 
 ---
