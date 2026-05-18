@@ -1,7 +1,5 @@
 # Monolith vs Modular Frontend Architecture
 
-## TL;DR
-
 A monolithic frontend bundles all features into a single, tightly coupled application. A modular frontend splits the application into independent, loosely coupled units. Neither is inherently better — the right choice depends on team size, product complexity, and how fast things need to move.
 
 ---
@@ -14,12 +12,12 @@ A monolithic frontend is a single deployable unit where all features share the s
 ┌──────────────────────────────────────────────┐
 │              Single SPA Bundle               │
 │                                              │
-│   ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│   │  Auth    │  │  Cart    │  │ Checkout  │  │
-│   └──────────┘  └──────────┘  └──────────┘  │
-│   ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│   │ Products │  │ Profile  │  │ Search   │  │
-│   └──────────┘  └──────────┘  └──────────┘  │
+│   ┌──────────┐  ┌──────────┐  ┌──────────┐   │
+│   │  Auth    │  │  Cart    │  │ Checkout │   │
+│   └──────────┘  └──────────┘  └──────────┘   │
+│   ┌──────────┐  ┌──────────┐  ┌──────────┐   │
+│   │ Products │  │ Profile  │  │ Search   │   │
+│   └──────────┘  └──────────┘  └──────────┘   │
 │                                              │
 │          Shared: State, Router, Utils        │
 └──────────────────────────────────────────────┘
@@ -51,8 +49,8 @@ A modular frontend splits the application into independently developed (and some
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                    Shell / Host App                  │
-│              (routing, layout, auth guard)           │
+│                    Shell / Host App                 │
+│              (routing, layout, auth guard)          │
 └──────────┬──────────────┬──────────────┬────────────┘
            │              │              │
      ┌─────▼──────┐ ┌─────▼──────┐ ┌────▼───────┐
@@ -65,9 +63,9 @@ A modular frontend splits the application into independently developed (and some
      └────────────┘ └────────────┘ └────────────┘
            │              │              │
      ┌─────▼──────────────▼──────────────▼────────┐
-     │            Shared Package Layer              │
-     │    (design system, API client, auth utils)   │
-     └──────────────────────────────────────────────┘
+     │            Shared Package Layer            │
+     │    (design system, API client, auth utils) │
+     └────────────────────────────────────────────┘
 ```
 
 Each module:
