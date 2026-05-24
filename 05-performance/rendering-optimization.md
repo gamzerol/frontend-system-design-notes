@@ -1,7 +1,5 @@
 # Rendering Optimization
 
-## TL;DR
-
 Rendering optimization is about doing less work, less often, and at the right time. In React, this means understanding what triggers re-renders, how the reconciler works, and when memoization actually helps (hint: less often than you think). At the system level, it means choosing the right rendering strategy — CSR, SSR, SSG, or ISR — based on your data's update frequency and SEO requirements.
 
 ---
